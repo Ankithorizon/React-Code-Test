@@ -5,7 +5,8 @@ import "./App.css";
 
 import Home from "./components/Home/home";
 import Header from "./components/Header/header";
-
+import Counter from './components/Counter/counter';
+import RemoteApi from "./components/RemoteApi/remoteapi";
 function App() {
   return (
     <div className="App">
@@ -14,7 +15,9 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/home" element={<Home />} />         
+            <Route path="/home" element={<Home />} />
+            <Route path="/counter" element={<Counter />} />
+            <Route path="/remote-api" element={<RemoteApi />} />
           </Routes>
         </Router>
       </div>
