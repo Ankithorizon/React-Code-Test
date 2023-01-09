@@ -1,9 +1,8 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import React from "react";
 import { useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
 
-const counter = () => {
+const Counter = () => {
   const [count, setCount] = useState(0);
 
   const incrementCounter = () => {
@@ -52,4 +51,4 @@ const counter = () => {
   );
 };
 
-export default counter;
+export default Counter;
