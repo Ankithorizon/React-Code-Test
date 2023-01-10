@@ -17,6 +17,7 @@ const Home = () => {
     if (param === "counter") navigate("/counter");
     else if (param === "remote-api") navigate("/remote-api");
     else if (param === "form-submit") navigate("/form-submit");
+    else if (param === "paging") navigate("/paging");
   };
   return (
     <div className="mainContainer">
@@ -87,6 +88,24 @@ const Home = () => {
                   <Button
                     onClick={() => {
                       getCode("form-submit");
+                    }}
+                    variant="primary"
+                  >
+                    See code...
+                  </Button>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col>
+              <Card style={{ width: "18rem" }}>
+                <Card.Body>
+                  <Card.Title>Paging</Card.Title>
+                  <Card.Text>
+                    <span>paging</span>
+                  </Card.Text>
+                  <Button
+                    onClick={() => {
+                      getCode("paging");
                     }}
                     variant="primary"
                   >

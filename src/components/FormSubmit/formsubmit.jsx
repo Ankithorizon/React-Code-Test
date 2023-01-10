@@ -10,6 +10,11 @@ const FormSubmit = () => {
     emailAddressError: "",
     passwordError: "",
   });
+  const [disableSubmit, setDisableSubmit] = useState(false);
+
+  useEffect(() => {
+    disableSubmitButton();
+  }, []);
 
   const displayModelErrors = () => {
     return (
@@ -33,6 +38,12 @@ const FormSubmit = () => {
     );
   };
 
+  // this will disable submit button @ beginning
+  const disableSubmitButton = () => {
+    if (emailAddress === "" || password === "") setDisableSubmit(true);
+    else setDisableSubmit(false);
+  };
+
   const formDataSubmit = () => {
     if (modelError.passwordError && modelError.passwordError.length > 0) {
       return;
@@ -48,6 +59,8 @@ const FormSubmit = () => {
     console.log(emailAddress, password);
   };
   const formValueChanged = (event) => {
+    disableSubmitButton();
+
     // emailAddress
     if (event.target.name === "emailAddress") {
       setEmailAddress(event.target.value);
@@ -139,6 +152,7 @@ const FormSubmit = () => {
               </div>
               <p></p>
               <Button
+                disabled={disableSubmit}
                 onClick={(e) => formDataSubmit(e)}
                 type="button"
                 className="btn btn-success"
