@@ -1,0 +1,10 @@
+.modelValidation{
+    color : red;
+    font-size: large;
+}
+.form-group{
+    margin: 20px;
+}
+.fieldErrorMessage{
+    color: red;
+}
