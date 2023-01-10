@@ -15,6 +15,8 @@ const Home = () => {
   const getCode = (param) => {
     console.log(param);
     if (param === "counter") navigate("/counter");
+    else if (param === "remote-api") navigate("/remote-api");
+    else if (param === "form-submit") navigate("/form-submit");
   };
   return (
     <div className="mainContainer">
@@ -62,19 +64,34 @@ const Home = () => {
                       data[record] each time
                     </span>
                   </Card.Text>
-                  <Button variant="primary">See code...</Button>
+                  <Button
+                    onClick={() => {
+                      getCode("remote-api");
+                    }}
+                    variant="primary"
+                  >
+                    See code...
+                  </Button>
                 </Card.Body>
               </Card>
             </Col>
             <Col>
               <Card style={{ width: "18rem" }}>
                 <Card.Body>
-                  <Card.Title>Card Title</Card.Title>
+                  <Card.Title>Form-Submit-Validation</Card.Title>
                   <Card.Text>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                    <span>form submit</span>
+                    <br />
+                    <span>form validation</span>
                   </Card.Text>
-                  <Button variant="primary">Go somewhere</Button>
+                  <Button
+                    onClick={() => {
+                      getCode("form-submit");
+                    }}
+                    variant="primary"
+                  >
+                    See code...
+                  </Button>
                 </Card.Body>
               </Card>
             </Col>

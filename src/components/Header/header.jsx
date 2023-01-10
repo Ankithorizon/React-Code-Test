@@ -33,6 +33,9 @@ const Header = () => {
             <Link to={"/remote-api"} className="nav-link">
               Remote-Api
             </Link>
+            <Link to={"/form-submit"} className="nav-link">
+              Form-Submit
+            </Link>
           </Nav>
         </Navbar.Collapse>
         {/*

@@ -7,6 +7,8 @@ import Home from "./components/Home/home";
 import Header from "./components/Header/header";
 import Counter from './components/Counter/counter';
 import RemoteApi from "./components/RemoteApi/remoteapi";
+import FormSubmit from "./components/FormSubmit/formsubmit";
+
 function App() {
   return (
     <div className="App">
@@ -18,6 +20,7 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/counter" element={<Counter />} />
             <Route path="/remote-api" element={<RemoteApi />} />
+            <Route path="/form-submit" element={<FormSubmit />} />
           </Routes>
         </Router>
       </div>
