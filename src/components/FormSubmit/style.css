@@ -1,6 +1,7 @@
 .modelValidation{
     color : red;
     font-size: large;
+    text-align: left;
 }
 .form-group{
     margin: 20px;

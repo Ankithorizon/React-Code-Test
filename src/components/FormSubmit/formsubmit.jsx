@@ -11,10 +11,38 @@ const FormSubmit = () => {
     passwordError: "",
   });
 
+  const displayModelErrors = () => {
+    return (
+      <div>
+        <div>
+          {modelError.emailAddressError &&
+          modelError.emailAddressError.length > 0 ? (
+            <span>{modelError.emailAddressError}</span>
+          ) : (
+            <span></span>
+          )}
+        </div>
+        <div>
+          {modelError.passwordError && modelError.passwordError.length > 0 ? (
+            <span>{modelError.passwordError}</span>
+          ) : (
+            <span></span>
+          )}
+        </div>
+      </div>
+    );
+  };
+
   const formDataSubmit = () => {
-    if (modelError.passwordError && modelError.passwordError.length > 0) return;
-    if (modelError.emailAddressError && modelError.emailAddressError.length > 0)
+    if (modelError.passwordError && modelError.passwordError.length > 0) {
       return;
+    }
+    if (
+      modelError.emailAddressError &&
+      modelError.emailAddressError.length > 0
+    ) {
+      return;
+    }
 
     // if form is valid then submit data to api
     console.log(emailAddress, password);
@@ -57,13 +85,18 @@ const FormSubmit = () => {
     <div>
       <h3>Form-Validation-Submit</h3>
       <p></p>
-      <div className="modelValidation">model validation</div>
-      <p></p>
       <div>
         <form>
           <div className="row">
             <div className="col-sm-3"></div>
             <div className="col-sm-6">
+              <div className="row">
+                <div className="col-sm-3"></div>
+                <div className="col-sm-4">
+                  <div className="modelValidation">{displayModelErrors()}</div>
+                </div>
+              </div>
+
               <div className="form-group">
                 <div className="row">
                   <div className="col-sm-3">
