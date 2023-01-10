@@ -36,6 +36,9 @@ const Header = () => {
             <Link to={"/form-submit"} className="nav-link">
               Form-Submit
             </Link>
+            <Link to={"/paging"} className="nav-link">
+              Paging
+            </Link>
           </Nav>
         </Navbar.Collapse>
         {/*

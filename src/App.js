@@ -5,9 +5,10 @@ import "./App.css";
 
 import Home from "./components/Home/home";
 import Header from "./components/Header/header";
-import Counter from './components/Counter/counter';
+import Counter from "./components/Counter/counter";
 import RemoteApi from "./components/RemoteApi/remoteapi";
 import FormSubmit from "./components/FormSubmit/formsubmit";
+import Paging from "./components/Paging/paging";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/counter" element={<Counter />} />
             <Route path="/remote-api" element={<RemoteApi />} />
             <Route path="/form-submit" element={<FormSubmit />} />
+            <Route path="/paging" element={<Paging />} />
           </Routes>
         </Router>
       </div>
