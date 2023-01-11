@@ -31,6 +31,19 @@ const Master = () => {
       </div>
     );
   };
+
+  // this will update master component when detail component notify
+  // through event
+  const updateMasterComponent_NameChanged = (name, updatedName) => {
+    console.log("master is called from child", updatedName);
+
+    // var user_ = users.find((x) => x.name === name);
+
+    setUsers([
+      ...users,
+      { ...(users.find((x) => x.name === name).name = updatedName) },
+    ]);
+  };
   return (
     <div>
       <h3>Master-Detail</h3>
@@ -46,6 +59,7 @@ const Master = () => {
             <div>
               {selectedUser && (
                 <Detail
+                  action={updateMasterComponent_NameChanged}
                   username={selectedUser.username}
                   email={selectedUser.email}
                   name={selectedUser.name}
