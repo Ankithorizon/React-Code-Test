@@ -39,6 +39,9 @@ const Header = () => {
             <Link to={"/paging"} className="nav-link">
               Paging
             </Link>
+            <Link to={"/master-detail"} className="nav-link">
+              Master-Detail
+            </Link>
           </Nav>
         </Navbar.Collapse>
         {/*

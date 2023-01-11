@@ -18,17 +18,18 @@ const Home = () => {
     else if (param === "remote-api") navigate("/remote-api");
     else if (param === "form-submit") navigate("/form-submit");
     else if (param === "paging") navigate("/paging");
+    else if (param === "master-detail") navigate("/master-detail");
   };
   return (
     <div className="mainContainer">
       <h3>React-Code-Test</h3>
 
       <p></p>
-      <div>
+      <div className="innerContent">
         <Container>
           <Row>
-            <Col>
-              <Card style={{ width: "18rem" }}>
+            <Col className="innerContent">
+              <Card className="cardStyle" style={{ width: "18rem" }}>
                 <Card.Body>
                   <Card.Title>Counter Button</Card.Title>
                   <Card.Text>
@@ -45,9 +46,9 @@ const Home = () => {
                 </Card.Body>
               </Card>
             </Col>
-            <Col>
+            <Col className="innerContent">
               {" "}
-              <Card style={{ width: "18rem" }}>
+              <Card className="cardStyle" style={{ width: "18rem" }}>
                 <Card.Body>
                   <Card.Title>Remote Api Call</Card.Title>
                   <Card.Text>
@@ -76,8 +77,8 @@ const Home = () => {
                 </Card.Body>
               </Card>
             </Col>
-            <Col>
-              <Card style={{ width: "18rem" }}>
+            <Col className="innerContent">
+              <Card className="cardStyle" style={{ width: "18rem" }}>
                 <Card.Body>
                   <Card.Title>Form-Submit-Validation</Card.Title>
                   <Card.Text>
@@ -96,8 +97,8 @@ const Home = () => {
                 </Card.Body>
               </Card>
             </Col>
-            <Col>
-              <Card style={{ width: "18rem" }}>
+            <Col className="innerContent">
+              <Card className="cardStyle" style={{ width: "18rem" }}>
                 <Card.Body>
                   <Card.Title>Paging</Card.Title>
                   <Card.Text>
@@ -106,6 +107,24 @@ const Home = () => {
                   <Button
                     onClick={() => {
                       getCode("paging");
+                    }}
+                    variant="primary"
+                  >
+                    See code...
+                  </Button>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col className="innerContent">
+              <Card className="cardStyle" style={{ width: "18rem" }}>
+                <Card.Body>
+                  <Card.Title>Master-Detail</Card.Title>
+                  <Card.Text>
+                    <span>master-detail</span>
+                  </Card.Text>
+                  <Button
+                    onClick={() => {
+                      getCode("master-detail");
                     }}
                     variant="primary"
                   >

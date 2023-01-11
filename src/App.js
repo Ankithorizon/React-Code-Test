@@ -9,6 +9,7 @@ import Counter from "./components/Counter/counter";
 import RemoteApi from "./components/RemoteApi/remoteapi";
 import FormSubmit from "./components/FormSubmit/formsubmit";
 import Paging from "./components/Paging/paging";
+import Master from "./components/Master-Detail/master";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/remote-api" element={<RemoteApi />} />
             <Route path="/form-submit" element={<FormSubmit />} />
             <Route path="/paging" element={<Paging />} />
+            <Route path="/master-detail" element={<Master />} />
           </Routes>
         </Router>
       </div>
